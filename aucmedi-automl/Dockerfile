@@ -1,3 +1,7 @@
 FROM ghcr.io/frankkramer-lab/aucmedi:v0.11.0
 
-COPY files/processing-container.json /processing-container.json
+LABEL IMAGE="aucmedi-automl"
+LABEL BUILD_IGNORE="False"
+
+COPY processing-container.json /
+WORKDIR /home/kaapana

@@ -1,0 +1,17 @@
+{
+    "name": "aucmedi-automl",
+    "description": "AUCMEDI AutoML Processing Container for Kaapana",
+    "templates": [
+        {
+            "identifier": "default",
+            "description": "Executes the AutoML pipeline on the input data and produces the output data.",
+            "inputs": [
+                {"name": "training", "mounted_path": "/home/kaapana/aucmedi.data/training"},
+                {"name": "test", "mounted_path": "/home/aucmedi.data/test"}
+            ],
+            "outputs": [], 
+            "env": [],
+            "command": ["python3", "-u", "start.py"]  
+        }
+    ]
+}
