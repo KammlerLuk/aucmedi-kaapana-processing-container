@@ -7,11 +7,13 @@
             "description": "Executes the AutoML pipeline on the input data and produces the output data.",
             "inputs": [
                 {"name": "training", "mounted_path": "/home/kaapana/aucmedi.data/training"},
-                {"name": "test", "mounted_path": "/home/aucmedi.data/test"}
+                {"name": "test", "mounted_path": "/home/kaapana/aucmedi.data/test"}
             ],
-            "outputs": [], 
+            "outputs": [
+                {"name": "output", "mounted_path": "/home/kaapana/aucmedi.data"}
+            ], 
             "env": [],
-            "command": ["python3", "-u", "start.py"]  
+            "command": ["aucmedi"]  
         }
     ]
 }
