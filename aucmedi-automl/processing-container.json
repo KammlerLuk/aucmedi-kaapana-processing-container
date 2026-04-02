@@ -3,8 +3,8 @@
     "description": "AUCMEDI AutoML Processing Container for Kaapana",
     "templates": [
         {
-            "identifier": "default",
-            "description": "Executes the AutoML pipeline on the input data and produces the output data.",
+            "identifier": "AUCMEDI_AutoML_training",
+            "description": "Trains a model through the AutoML pipeline.",
             "inputs": [
                 {"name": "training", "mounted_path": "/home/kaapana/aucmedi.data/training"},
                 {"name": "test", "mounted_path": "/home/kaapana/aucmedi.data/test"}
@@ -13,7 +13,33 @@
                 {"name": "output", "mounted_path": "/home/kaapana/aucmedi.data"}
             ], 
             "env": [],
-            "command": ["aucmedi"]  
+            "command": ["training"]  
+        },
+        {
+            "identifier": "AUCMEDI_AutoML_prediction",
+            "description": "Performs a predcition by the model in the AutoML pipeline.",
+            "inputs": [
+                {"name": "training", "mounted_path": "/home/kaapana/aucmedi.data/training"},
+                {"name": "test", "mounted_path": "/home/kaapana/aucmedi.data/test"}
+            ],
+            "outputs": [
+                {"name": "output", "mounted_path": "/home/kaapana/aucmedi.data"}
+            ], 
+            "env": [],
+            "command": ["prediction"]  
+        },
+        {
+            "identifier": "AUCMEDI_AutoML_evaluation",
+            "description": "Evaluates the model in the AutoML pipeline.",
+            "inputs": [
+                {"name": "training", "mounted_path": "/home/kaapana/aucmedi.data/training"},
+                {"name": "test", "mounted_path": "/home/kaapana/aucmedi.data/test"}
+            ],
+            "outputs": [
+                {"name": "output", "mounted_path": "/home/kaapana/aucmedi.data"}
+            ], 
+            "env": [],
+            "command": ["evaluation"]  
         }
     ]
 }
