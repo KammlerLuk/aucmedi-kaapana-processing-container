@@ -1,4 +1,0 @@
----
-global:
-    image: "dag-aucmedi-prediction-workflow"
-    action: "copy"

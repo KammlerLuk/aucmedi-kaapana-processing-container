@@ -1,4 +1,0 @@
----
-global:
-    image: "dag-aucmedi-training-workflow"
-    action: "copy"
