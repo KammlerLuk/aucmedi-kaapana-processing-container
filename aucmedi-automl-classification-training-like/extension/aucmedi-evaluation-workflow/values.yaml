@@ -1,4 +1,0 @@
----
-global:
-    image: "dag-aucmedi-evaluation-workflow"
-    action: "copy"
