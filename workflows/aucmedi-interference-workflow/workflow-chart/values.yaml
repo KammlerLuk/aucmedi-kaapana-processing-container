@@ -3,4 +3,4 @@ global:
   pull_policy_images: "IfNotPresent"
 
 processingContainers:
-  - aucmedi-automl
+  - aucmedi-interference
