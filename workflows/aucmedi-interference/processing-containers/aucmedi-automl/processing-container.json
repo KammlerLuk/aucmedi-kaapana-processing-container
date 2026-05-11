@@ -1,0 +1,19 @@
+{
+    "name": "aucmedi-automl-interference",
+    "description": "AUCMEDI AutoML Interference Processing Container for Kaapana",
+    "templates": [
+        {
+            "identifier": "AUCMEDI_AutoML_prediction",
+            "description": "Performs a prediction by the model in the AutoML pipeline.",
+            "inputs": [
+                {"name": "training", "mounted_path": "/home/kaapana/aucmedi.data/training"},
+                {"name": "test", "mounted_path": "/home/kaapana/aucmedi.data/test"}
+            ],
+            "outputs": [
+                {"name": "output", "mounted_path": "/home/kaapana/aucmedi.data"}
+            ], 
+            "env": [],
+            "command": ["prediction"]  
+        }
+    ]
+}
