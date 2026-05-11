@@ -1,8 +1,8 @@
 ---
 apiVersion: v2
 appVersion: "1.0.0"
-description: "Workflow to implement the AUCMEDI AutoML framework based on the KaapanaTaskOperator and Task API compliant processing-containers"
-name: dummy-workflow
+description: "Workflow to implement the AUCMEDI AutoML interference based on the KaapanaTaskOperator and Task API compliant processing-containers"
+name: aucmedi-interference-workflow
 version: "0.0.0"
 keywords:
   - kaapanaworkflow-v2
@@ -12,4 +12,4 @@ dependencies:
     repository: "file://../../helpers"
 annotations:
   documentation: "user_guide/extensions.html#task-api-workflows"
-  ui-visible-name: "AUCMEDI AutoML workflow"
+  ui-visible-name: "AUCMEDI AutoML interference"
